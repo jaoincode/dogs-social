@@ -48,6 +48,16 @@ export function PHOTOS_GET({ page, total, user }) {
   };
 }
 
+export function PHOTO_GET(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+}
+
 export const TOKEN_VALIDATE_POST = (token) => {
   return {
     url: API_URL + '/jwt-auth/v1/token/validate',
