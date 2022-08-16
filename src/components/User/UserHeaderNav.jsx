@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import MinhasFotos from '../../assets/feed.svg';
-import Estatisticas from '../../assets/estatisticas.svg';
 import Adicionar from '../../assets/adicionar.svg';
 import Sair from '../../assets/sair.svg';
 import styles from './UserHeaderNav.module.css';
@@ -33,10 +32,6 @@ export const UserHeaderNav = () => {
         <NavLink to="/conta" end>
           <img src={MinhasFotos} />
           {mobile && 'Minhas Fotos'}
-        </NavLink>
-        <NavLink to="/conta/estatisticas">
-          <img src={Estatisticas} />
-          {mobile && 'Estatísticas'}
         </NavLink>
         <NavLink to="/conta/postar">
           <img src={Adicionar} />
